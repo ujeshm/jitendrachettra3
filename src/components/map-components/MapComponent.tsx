@@ -51,7 +51,7 @@ export const MapComponent = ({ children, boundaryData }: MapComponentProps) => {
       if (!wardNo) return;
       layer.bindTooltip(wardNo, {
         direction: 'center',
-        permanent: false,
+        permanent: true,
       });
       layer.on('click', (e) => {
         e.originalEvent.preventDefault();
@@ -92,6 +92,11 @@ export const MapComponent = ({ children, boundaryData }: MapComponentProps) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
         />
+        {/* <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          maxZoom={40}
+        /> */}
         {geoJsonData && <GeoJSON data={geoJsonData} style={geoJSONStyle} onEachFeature={onEachFeatureWard} />}
         {children}
       </MapContainer>

@@ -1,7 +1,7 @@
 export const wardData = [
   {
     id: 1,
-    name: 'ward-1',
+    name: 'LMC-1',
     ward_no: 1,
     geometry: {
       type: 'MultiPolygon',
@@ -587,7 +587,7 @@ export const wardData = [
   },
   {
     id: 2,
-    name: 'ward-2',
+    name: 'LMC-2',
     ward_no: 2,
     geometry: {
       type: 'MultiPolygon',
@@ -1037,7 +1037,7 @@ export const wardData = [
   },
   {
     id: 3,
-    name: 'ward-3',
+    name: 'LMC-3',
     ward_no: 3,
     geometry: {
       type: 'MultiPolygon',
@@ -1706,7 +1706,7 @@ export const wardData = [
   },
   {
     id: 4,
-    name: 'ward-4',
+    name: 'LMC-4',
     ward_no: 4,
     geometry: {
       type: 'MultiPolygon',
@@ -2253,7 +2253,7 @@ export const wardData = [
   },
   {
     id: 5,
-    name: 'ward-5',
+    name: 'LMC-5',
     ward_no: 5,
     geometry: {
       type: 'MultiPolygon',
@@ -2692,7 +2692,7 @@ export const wardData = [
   },
   {
     id: 10,
-    name: 'ward-10',
+    name: 'LMC-10',
     ward_no: 10,
     geometry: {
       type: 'MultiPolygon',
@@ -3281,7 +3281,7 @@ export const wardData = [
   },
   {
     id: 13,
-    name: 'ward-13',
+    name: 'LMC-13',
     ward_no: 13,
     geometry: {
       type: 'MultiPolygon',
@@ -3392,7 +3392,7 @@ export const wardData = [
   },
   {
     id: 14,
-    name: 'ward-14',
+    name: 'LMC-14',
     ward_no: 14,
     geometry: {
       type: 'MultiPolygon',
@@ -4200,7 +4200,7 @@ export const wardData = [
   },
   {
     id: 15,
-    name: 'ward-15',
+    name: 'LMC-15',
     ward_no: 15,
     geometry: {
       type: 'MultiPolygon',
@@ -5468,7 +5468,7 @@ export const wardData = [
 
   {
     id: 18,
-    name: 'ward-18',
+    name: 'LMC-18',
     ward_no: 18,
     geometry: {
       type: 'MultiPolygon',
@@ -6703,7 +6703,7 @@ export const wardData = [
 
   {
     id: 20,
-    name: 'ward-20',
+    name: 'LMC-20',
     ward_no: 20,
     geometry: {
       type: 'MultiPolygon',
@@ -7074,7 +7074,7 @@ export const wardData = [
   },
   {
     id: 21,
-    name: 'ward-21',
+    name: 'LMC-21',
     ward_no: 21,
     geometry: {
       type: 'MultiPolygon',
@@ -8161,7 +8161,7 @@ export const wardData = [
   },
   {
     id: 22,
-    name: 'ward-22',
+    name: 'LMC-22',
     ward_no: 22,
     geometry: {
       type: 'MultiPolygon',
@@ -9241,7 +9241,7 @@ export const wardData = [
   },
   {
     id: 23,
-    name: 'ward-23',
+    name: 'LMC-23',
     ward_no: 23,
     geometry: {
       type: 'MultiPolygon',
@@ -10294,7 +10294,7 @@ export const wardData = [
   },
   {
     id: 24,
-    name: 'ward-24',
+    name: 'LMC-24',
     ward_no: 24,
     geometry: {
       type: 'MultiPolygon',
@@ -12619,7 +12619,7 @@ export const wardData = [
   },
   {
     id: 26,
-    name: 'ward-26',
+    name: 'LMC-26',
     ward_no: 26,
     geometry: {
       type: 'MultiPolygon',
@@ -14481,7 +14481,7 @@ export const wardData = [
   },
   {
     id: 27,
-    name: 'ward-27',
+    name: 'LMC-27',
     ward_no: 27,
     geometry: {
       type: 'MultiPolygon',
@@ -16459,7 +16459,7 @@ export const wardData = [
   },
   {
     id: 28,
-    name: 'ward-28',
+    name: 'LMC-28',
     ward_no: 28,
     geometry: {
       type: 'MultiPolygon',
@@ -17877,7 +17877,7 @@ export const wardData = [
   },
   {
     id: 29,
-    name: 'ward-29',
+    name: 'LMC-29',
     ward_no: 29,
     geometry: {
       type: 'MultiPolygon',
