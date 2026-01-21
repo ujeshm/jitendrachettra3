@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+.leaflet-container:focus {
+  outline: none !important;
+}
+
+.no-focus-style {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Optionally, you can target Leaflet's default focus styles */
+.leaflet-interactive:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
