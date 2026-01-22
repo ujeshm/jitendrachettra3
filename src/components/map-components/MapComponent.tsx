@@ -1,8 +1,8 @@
 'use client';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { ReactNode } from 'react';
-import { GeoJSON, MapContainer, TileLayer } from 'react-leaflet';
+import { ReactNode, useEffect } from 'react';
+import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet';
 
 type WardItem = {
   name?: string;
@@ -13,6 +13,7 @@ type WardItem = {
 interface MapComponentProps {
   children?: ReactNode;
   boundaryData?: any[];
+  coordinate?: [number, number];
 }
 
 const distinctColors = [
@@ -42,7 +43,21 @@ const getColor = (id: number) => {
   return distinctColors[id % distinctColors.length];
 };
 
-export const MapComponent = ({ children, boundaryData }: MapComponentProps) => {
+const FlyToLocation = ({ center, zoom }: { center: [number, number]; zoom: number }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (center) {
+      map.flyTo(center, zoom, {
+        duration: 2,
+      });
+    }
+  }, [center, zoom, map]);
+
+  return null;
+};
+
+export const MapComponent = ({ children, boundaryData, coordinate = [27.6588, 85.3247] }: MapComponentProps) => {
   // hover effect
   const onEachFeatureWard = (feature: any, layer: L.Layer) => {
     const item = feature.properties as WardItem;
@@ -87,7 +102,7 @@ export const MapComponent = ({ children, boundaryData }: MapComponentProps) => {
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-2xl">
-      <MapContainer center={[27.6588, 85.3247]} zoom={13} className="w-full absolute inset-0 z-0 h-full">
+      <MapContainer center={coordinate} zoom={13} className="w-full absolute inset-0 z-0 h-full">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
@@ -97,7 +112,15 @@ export const MapComponent = ({ children, boundaryData }: MapComponentProps) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={40}
         /> */}
-        {geoJsonData && <GeoJSON data={geoJsonData} style={geoJSONStyle} onEachFeature={onEachFeatureWard} />}
+        {geoJsonData && (
+          <GeoJSON
+            key={boundaryData?.[0]?.name}
+            data={geoJsonData}
+            style={geoJSONStyle}
+            onEachFeature={onEachFeatureWard}
+          />
+        )}
+        <FlyToLocation center={coordinate} zoom={13} />
         {children}
       </MapContainer>
     </div>
