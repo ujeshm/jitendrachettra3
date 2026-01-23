@@ -17,26 +17,42 @@ interface MapComponentProps {
 }
 
 const distinctColors = [
-  '#FF5733',
-  '#33FF57',
-  '#3357FF',
-  '#FF33A1',
-  '#A133FF',
-  '#33FFF5',
-  '#F5FF33',
-  '#FF8C33',
-  '#8C33FF',
-  '#33FF8C',
-  '#FF3333',
-  '#33A1FF',
-  '#A1FF33',
-  '#FF5733',
-  '#5733FF',
-  '#33FF57',
-  '#FF33F5',
-  '#F533FF',
-  '#33F5FF',
-  '#FFB533',
+  '#FF5733', // red-orange
+  '#33FF57', // green
+  '#3357FF', // blue
+  '#FF33A1', // pink
+  '#A133FF', // purple
+  '#33FFF5', // cyan
+  '#F5FF33', // yellow
+  '#FF8C33', // orange
+  '#8C33FF', // violet
+  '#33FF8C', // mint
+  '#FF3333', // red
+  '#33A1FF', // sky blue
+  '#A1FF33', // lime
+  '#5733FF', // indigo
+  '#FF33F5', // magenta
+  '#F533FF', // deep pink
+  '#33F5FF', // light cyan
+  '#FFB533', // amber
+
+  // 🔽 added strong, map-safe colors
+  '#1ABC9C', // teal
+  '#16A085', // dark teal
+  '#2ECC71', // emerald
+  '#27AE60', // dark green
+  '#3498DB', // blue
+  '#2980B9', // dark blue
+  '#9B59B6', // purple
+  '#8E44AD', // dark purple
+  '#34495E', // blue-gray
+  '#2C3E50', // navy
+  '#F39C12', // orange-yellow
+  '#D35400', // burnt orange
+  '#E67E22', // carrot
+  '#C0392B', // dark red
+  '#7F8C8D', // gray
+  '#95A5A6', // light gray
 ];
 
 const getColor = (id: number) => {
