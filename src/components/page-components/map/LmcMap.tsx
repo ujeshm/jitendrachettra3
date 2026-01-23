@@ -21,7 +21,7 @@ const LmcMap = () => {
       />
       <button
         onClick={handleSwitchData}
-        className="absolute bottom-5 cursor-pointer right-5 z-50 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md hover:bg-gray-100"
+        className="absolute md:bottom-5 bottom-20 cursor-pointer right-5 z-50 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md hover:bg-gray-100"
       >
         Switch to {isLmc ? 'Parsa Area 1(Birgunj)' : 'LMC ward'}
       </button>
