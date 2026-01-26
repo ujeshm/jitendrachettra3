@@ -1,17 +1,7 @@
 const nextConfig = {
-  // async redirects(test) {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '',
-  //       permanent: false,
-  //     },
-  //   ];
-  // },
   typescript: {
     ignoreBuildErrors: true,
   },
-  swcMinify: false,
   images: {
     remotePatterns: [
       {
