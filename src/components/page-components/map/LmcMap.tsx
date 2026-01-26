@@ -3,13 +3,15 @@ import { wardData } from '@/utils/boundaries/data';
 
 import { BirgunjData } from '@/utils/boundaries/BirgunjData';
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const MapComponent = dynamic(() => import('@/components/map-components/MapComponent').then((mod) => mod.MapComponent), {
   ssr: false,
 });
 
-import { useGeolocation } from '@/hooks/useGeolocation';
+import { customIcon } from '@/helpers/helpers';
+import { useGetCurrentLocation } from '@/hooks/useGetCurrentLocation';
+import { Marker } from 'react-leaflet';
 
 const UserLocationMarker = dynamic(
   () => import('@/components/map-components/UserLocationMarker').then((mod) => mod.UserLocationMarker),
@@ -21,13 +23,7 @@ const UserLocationMarker = dynamic(
 const LmcMap = () => {
   const [isLmc, setIsLmc] = useState(true);
   const [mapCenter, setMapCenter] = useState<[number, number]>([27.6588, 85.3247]);
-  const { location: userLocation } = useGeolocation();
-
-  useEffect(() => {
-    if (userLocation) {
-      setMapCenter([userLocation.lat, userLocation.lng]);
-    }
-  }, [userLocation]);
+  const { loading, position, error } = useGetCurrentLocation();
 
   const handleSwitchData = () => {
     setIsLmc((p) => !p);
@@ -37,7 +33,7 @@ const LmcMap = () => {
   return (
     <div className="relative h-full w-full">
       <MapComponent boundaryData={isLmc ? wardData : BirgunjData} coordinate={mapCenter}>
-        {userLocation && <UserLocationMarker position={userLocation} />}
+        {position && !loading && <Marker position={position} icon={customIcon}></Marker>}
       </MapComponent>
 
       <div className="absolute right-5 bottom-20 md:bottom-5 z-50 flex flex-col gap-3">
