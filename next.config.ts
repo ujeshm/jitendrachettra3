@@ -1,6 +1,6 @@
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     remotePatterns: [
@@ -13,9 +13,6 @@ const nextConfig = {
         hostname: '**', // Wildcard pattern
       },
     ],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 
