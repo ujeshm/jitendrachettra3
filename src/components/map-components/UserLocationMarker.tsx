@@ -11,11 +11,14 @@ interface UserLocationMarkerProps {
   };
 }
 
-const customIcon = L.icon({
-  iconUrl: '/image/locationIco.png',
-  iconSize: [40, 40],
-  iconAnchor: [20, 20],
-});
+const customIcon =
+  typeof window !== 'undefined'
+    ? L.icon({
+        iconUrl: '/image/marker/location.png',
+        iconSize: [40, 40],
+        iconAnchor: [20, 20],
+      })
+    : null;
 
 export const UserLocationMarker = ({ position }: UserLocationMarkerProps) => {
   const map = useMap();
@@ -54,7 +57,7 @@ export const UserLocationMarker = ({ position }: UserLocationMarkerProps) => {
           weight: 3,
         }}
       /> */}
-      <Marker position={[position.lat, position.lng]} icon={customIcon} />
+      {customIcon && <Marker position={[position.lat, position.lng]} icon={customIcon} />}
     </>
   );
 };

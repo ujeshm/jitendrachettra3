@@ -55,7 +55,7 @@ const LoginComponent = () => {
               <InputField
                 name={'username'}
                 label={'username'}
-                type={'username'}
+                type={'text'}
                 placeholder={'Enter your username'}
                 errors={errors?.username?.message}
                 register={register}

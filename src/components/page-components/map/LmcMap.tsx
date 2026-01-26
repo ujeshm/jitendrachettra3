@@ -9,9 +9,7 @@ const MapComponent = dynamic(() => import('@/components/map-components/MapCompon
   ssr: false,
 });
 
-import { customIcon } from '@/helpers/helpers';
-import { useGetCurrentLocation } from '@/hooks/useGetCurrentLocation';
-import { Marker } from 'react-leaflet';
+import { LocateFixed } from 'lucide-react';
 
 const UserLocationMarker = dynamic(
   () => import('@/components/map-components/UserLocationMarker').then((mod) => mod.UserLocationMarker),
@@ -23,18 +21,50 @@ const UserLocationMarker = dynamic(
 const LmcMap = () => {
   const [isLmc, setIsLmc] = useState(true);
   const [mapCenter, setMapCenter] = useState<[number, number]>([27.6588, 85.3247]);
-  const { loading, position, error } = useGetCurrentLocation();
+  const [showUserLocation, setShowUserLocation] = useState(false);
+  const [position, setPosition] = useState<{ lat: number; lng: number; accuracy: number } | null>(null);
+  const [isLocating, setIsLocating] = useState(false);
 
   const handleSwitchData = () => {
     setIsLmc((p) => !p);
     setMapCenter(isLmc ? [27.0041, 84.8744] : [27.6588, 85.3247]);
   };
 
+  const handleShowMyLocation = () => {
+    setIsLocating(true);
+    if (typeof window !== 'undefined' && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude, accuracy } = pos.coords;
+          setPosition({ lat: latitude, lng: longitude, accuracy });
+          setShowUserLocation(true);
+          setIsLocating(false);
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+          setIsLocating(false);
+        }
+      );
+    }
+  };
+
   return (
     <div className="relative h-full w-full">
       <MapComponent boundaryData={isLmc ? wardData : BirgunjData} coordinate={mapCenter}>
-        {position && !loading && <Marker position={position} icon={customIcon}></Marker>}
+        {showUserLocation && position && <UserLocationMarker position={position}></UserLocationMarker>}
       </MapComponent>
+
+      <div className="absolute top-5 right-5 z-50">
+        <button
+          onClick={handleShowMyLocation}
+          disabled={isLocating}
+          className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md transition-all hover:bg-gray-100 active:scale-95 disabled:bg-gray-300 disabled:cursor-not-allowed"
+          title="Show My Location"
+        >
+          <LocateFixed size={20} className="text-blue-600" />
+          <span>{isLocating ? 'Getting location...' : 'Show My Location'}</span>
+        </button>
+      </div>
 
       <div className="absolute right-5 bottom-20 md:bottom-5 z-50 flex flex-col gap-3">
         <button
