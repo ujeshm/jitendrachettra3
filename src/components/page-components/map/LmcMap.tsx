@@ -31,21 +31,21 @@ const LmcMap = () => {
   };
 
   const handleShowMyLocation = () => {
-    setIsLocating(true);
-    if (typeof window !== 'undefined' && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          const { latitude, longitude, accuracy } = pos.coords;
-          setPosition({ lat: latitude, lng: longitude, accuracy });
-          setShowUserLocation(true);
-          setIsLocating(false);
-        },
-        (error) => {
-          console.error('Error getting location:', error);
-          setIsLocating(false);
-        }
-      );
-    }
+    // setIsLocating(true);
+    // if (typeof window !== 'undefined' && navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(
+    //     (pos) => {
+    //       const { latitude, longitude, accuracy } = pos.coords;
+    //       setPosition({ lat: latitude, lng: longitude, accuracy });
+    //       setShowUserLocation(true);
+    //       setIsLocating(false);
+    //     },
+    //     (error) => {
+    //       console.error('Error getting location:', error);
+    //       setIsLocating(false);
+    //     }
+    //   );
+    // }
   };
 
   return (
