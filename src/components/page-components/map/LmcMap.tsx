@@ -31,21 +31,21 @@ const LmcMap = () => {
   };
 
   const handleShowMyLocation = () => {
-    // setIsLocating(true);
-    // if (typeof window !== 'undefined' && navigator.geolocation) {
-    //   navigator.geolocation.getCurrentPosition(
-    //     (pos) => {
-    //       const { latitude, longitude, accuracy } = pos.coords;
-    //       setPosition({ lat: latitude, lng: longitude, accuracy });
-    //       setShowUserLocation(true);
-    //       setIsLocating(false);
-    //     },
-    //     (error) => {
-    //       console.error('Error getting location:', error);
-    //       setIsLocating(false);
-    //     }
-    //   );
-    // }
+    setIsLocating(true);
+    if (typeof window !== 'undefined' && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude, accuracy } = pos.coords;
+          setPosition({ lat: latitude, lng: longitude, accuracy });
+          setShowUserLocation(true);
+          setIsLocating(false);
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+          setIsLocating(false);
+        }
+      );
+    }
   };
 
   return (
@@ -54,7 +54,7 @@ const LmcMap = () => {
         {showUserLocation && position && <UserLocationMarker position={position}></UserLocationMarker>}
       </MapComponent>
 
-      <div className="absolute top-5 right-5 z-50">
+      <div className="absolute top-5 right-5 z-[9999px]">
         <button
           onClick={handleShowMyLocation}
           disabled={isLocating}
