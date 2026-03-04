@@ -2,7 +2,7 @@ export const VotingCenter = [
   // ward 1
   {
     id: 1,
-    name: '1 ward building',
+    name: '१ नं. वडा कार्यालय',
     ward_no: 1,
     lat: 27.6907843,
     lng: 85.3125227,
@@ -58,8 +58,8 @@ export const VotingCenter = [
     id: 6,
     ward_no: 5,
     name: 'Mahalaxmisthan (Not Accurate)',
-    lat: 27.6631472,
-    lng: 85.3159457,
+    lat: 27.6627782,
+    lng: 85.3189401,
     description: 'Voter 6 description',
     address: 'Lalitpur',
     phone: 'Voter 6 phone',
@@ -68,9 +68,9 @@ export const VotingCenter = [
   {
     id: 7,
     ward_no: 10,
-    name: 'Prasuti Griha', // left
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'Prasuti Griha (Not accurate)', // left
+    lat: 27.6864744,
+    lng: 85.3203614,
     description: 'Voter 7 description',
     address: 'Lalitpur',
     phone: 'Voter 7 phone',
@@ -80,8 +80,8 @@ export const VotingCenter = [
     id: 8,
     ward_no: 13,
     name: 'Yatayat (Not Accurate)', // left not sure
-    lat: 27.6652086,
-    lng: 85.3082222,
+    lat: 27.6653213,
+    lng: 85.3106975,
     description: 'Voter 8 description',
     address: 'Lalitpur',
     phone: 'Voter 8 phone',
@@ -166,9 +166,9 @@ export const VotingCenter = [
   {
     id: 151,
     ward_no: 21,
-    name: 'Koilachi Guthi Khokana', // not sure
-    lat: 27.6435302,
-    lng: 85.2745642,
+    name: 'कोयलाक्षी गुठी भवन खोकना (Not Accurate)',
+    lat: 27.6432,
+    lng: 85.2957,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -177,9 +177,9 @@ export const VotingCenter = [
   {
     id: 16,
     ward_no: 22,
-    name: 'Adarsha Saul Bungamati',
-    lat: 27.6358293,
-    lng: 85.3031255,
+    name: 'आदर्श सौल युवक मा.बि. बुङ्गमती',
+    lat: 27.6331,
+    lng: 85.3038,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -187,9 +187,9 @@ export const VotingCenter = [
   {
     id: 17,
     ward_no: 22,
-    name: '22 Wardbuilding', // not found
-    lat: 27.6588,
-    lng: 85.3247,
+    name: '२२ नं.वडा कार्यालय भवन बुङ्गमती (Not Accurate)',
+    lat: 27.6199,
+    lng: 85.30198,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -197,9 +197,9 @@ export const VotingCenter = [
   {
     id: 18,
     ward_no: 22,
-    name: 'Chunidevi Chunnikhel',
-    lat: 27.6192555,
-    lng: 85.2999306,
+    name: 'चुनिदेबी शिक्षा मन्दीर आ.बि. चुनिखेल (Not Accurate)', // not sure
+    lat: 27.5953,
+    lng: 85.2919,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -221,8 +221,8 @@ export const VotingCenter = [
     id: 20,
     ward_no: 24,
     name: 'Jalpa Mavi Dhapakhel',
-    lat: 27.6811923,
-    lng: 85.3031074,
+    lat: 27.6262034,
+    lng: 85.3317106,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -240,9 +240,9 @@ export const VotingCenter = [
   {
     id: 22,
     ward_no: 24,
-    name: 'Swastha Chauki Bhawan', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'स्वास्थ्य चौकी भवन (Not Accurate)', // not sure
+    lat: 27.628229,
+    lng: 85.3269207,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -251,9 +251,9 @@ export const VotingCenter = [
   {
     id: 23,
     ward_no: 25,
-    name: 'Janaudaya Mabi', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'जन उदय मा.बि.खरिडोल भैसेपाटी', // not sure
+    lat: 27.6514313,
+    lng: 85.3068579,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -283,9 +283,9 @@ export const VotingCenter = [
   {
     id: 26,
     ward_no: 27,
-    name: 'Chapafal Mahadev', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'Chapafal Mahadev (Not accurate)', // not sure
+    lat: 27.6308475,
+    lng: 85.3175079,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
