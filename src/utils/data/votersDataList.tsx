@@ -2,10 +2,10 @@ export const VotingCenter = [
   // ward 1
   {
     id: 1,
-    name: '8723 1 ward building',
+    name: '1 ward building',
     ward_no: 1,
-    lat: 27.6588,
-    lng: 85.3247,
+    lat: 27.6907843,
+    lng: 85.3125227,
     description: 'Voter 1 description',
     address: 'Lalitpur',
     phone: 'Voter 1 phone',
@@ -13,7 +13,7 @@ export const VotingCenter = [
   // ward 2
   {
     id: 2,
-    name: '8732 Rajtirtha',
+    name: 'Rajtirtha',
     ward_no: 2,
     lat: 27.6911156,
     lng: 85.3035651,
@@ -23,7 +23,7 @@ export const VotingCenter = [
   },
   {
     id: 3,
-    name: '8733 Tika Bidhyaashram',
+    name: 'Tika Bidhyaashram',
     ward_no: 2,
     lat: 27.6854001,
     lng: 85.306927,
@@ -34,10 +34,10 @@ export const VotingCenter = [
   // ward 3
   {
     id: 4,
-    name: 'Idol Model',
+    name: 'Ideal Model',
     ward_no: 3,
-    lat: 27.6771264,
-    lng: 85.3056344,
+    lat: 27.6771722,
+    lng: 85.307866,
     description: 'Voter 4 description',
     address: 'Lalitpur',
     phone: 'Voter 4 phone',
@@ -46,9 +46,9 @@ export const VotingCenter = [
   {
     id: 5,
     ward_no: 4,
-    name: 'Woda Samiti',
-    lat: 27.6771498,
-    lng: 85.2979096,
+    name: 'Woda Samiti', // not sure
+    lat: 27.673512,
+    lng: 85.3128209,
     description: 'Voter 5 description',
     address: 'Lalitpur',
     phone: 'Voter 5 phone',
@@ -83,7 +83,7 @@ export const VotingCenter = [
     lat: 27.6652086,
     lng: 85.3082222,
     description: 'Voter 8 description',
-    address: 'Voter 8 address',
+    address: 'Lalitpur',
     phone: 'Voter 8 phone',
   },
   // ward 14
@@ -136,8 +136,8 @@ export const VotingCenter = [
     id: 13,
     ward_no: 20,
     name: 'Tripadma Pulchowk',
-    lat: 27.6755638,
-    lng: 85.3142979,
+    lat: 27.675571,
+    lng: 85.316696,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -347,8 +347,8 @@ export const VotingCenter = [
     id: 32,
     ward_no: 12,
     name: 'Godawari Saraswoti School', // not sure
-    lat: 27.6142712,
-    lng: 85.3247,
+    lat: 27.6142661,
+    lng: 85.3222502,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',

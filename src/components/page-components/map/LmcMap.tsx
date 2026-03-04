@@ -72,7 +72,7 @@ const LmcMap = () => {
         {isLmc && (
           <button
             onClick={() => setShowVotingCenter((p) => !p)}
-            className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md transition-all hover:bg-gray-100 active:scale-95 disabled:bg-gray-300 disabled:cursor-not-allowed"
+            className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md transition-all hover:bg-gray-100 active:scale-95 disabled:bg-gray-300 disabled:cursor-not-allowed capitalize"
             title="Show My Location"
           >
             <span>Voting center chettra 3</span>
@@ -80,14 +80,14 @@ const LmcMap = () => {
         )}
       </div>
 
-      <div className="absolute right-5 bottom-20 md:bottom-5 z-50 flex flex-col gap-3">
+      {/* <div className="absolute right-5 bottom-20 md:bottom-5 z-50 flex flex-col gap-3">
         <button
           onClick={handleSwitchData}
           className="cursor-pointer rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md hover:bg-gray-100"
         >
           Switch to {isLmc ? 'Parsa Area 1 (Birgunj)' : 'Lalitpur chhetra 3'}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
