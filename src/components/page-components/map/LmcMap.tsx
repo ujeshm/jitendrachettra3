@@ -5,7 +5,9 @@ import { BirgunjData } from '@/utils/boundaries/BirgunjData';
 import { LocateFixed } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import MapDataDisplay from './MapData/MapDataDisplay';
+const MapDataDisplay = dynamic(() => import('./MapData/MapDataDisplay'), {
+  ssr: false,
+});
 
 const MapComponent = dynamic(() => import('@/components/map-components/MapComponent').then((mod) => mod.MapComponent), {
   ssr: false,

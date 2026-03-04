@@ -1,6 +1,10 @@
 'use client';
-import LmcMap from '@/components/page-components/map/LmcMap';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
+
+const LmcMap = dynamic(() => import('@/components/page-components/map/LmcMap'), {
+  ssr: false,
+});
 
 export default function Home() {
   const router = useRouter();
