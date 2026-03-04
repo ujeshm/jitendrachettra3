@@ -356,7 +356,7 @@ export const VotingCenter = [
   {
     id: 33,
     ward_no: 12,
-    name: 'Godawari Pamagal Hawai',
+    name: 'Godawari Pamagal Hawai', // not sure
     lat: 27.6588,
     lng: 85.3247,
     description: 'Voter 10 description',

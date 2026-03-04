@@ -50,16 +50,16 @@ const MapDataDisplay = ({}: MapDataDisplayProps) => {
                 <p>Ward number: {point.ward_no}</p>
                 {point.address && <p>Address: {point.address}</p>}
                 {point.phone && <p>Phone: {point.phone}</p>}
-                {point?.google_maps_link && (
+                {point.lat && point.lng && (
                   <p>
                     Google Maps:{' '}
                     <a
-                      href={point.google_maps_link}
+                      href={`https://www.google.com/maps?q=${point.lat},${point.lng}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 underline"
                     >
-                      Open Link
+                      Open Location
                     </a>
                   </p>
                 )}
