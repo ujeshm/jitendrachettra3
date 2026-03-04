@@ -5,6 +5,7 @@ import { BirgunjData } from '@/utils/boundaries/BirgunjData';
 import { LocateFixed } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import MapDataDisplay from './MapData/MapDataDisplay';
 
 const MapComponent = dynamic(() => import('@/components/map-components/MapComponent').then((mod) => mod.MapComponent), {
   ssr: false,
@@ -19,6 +20,7 @@ const UserLocationMarker = dynamic(
 
 const LmcMap = () => {
   const [isLmc, setIsLmc] = useState(true);
+  const [showVotingCenter, setShowVotingCenter] = useState(false);
   const [mapCenter, setMapCenter] = useState<[number, number]>([27.6588, 85.3247]);
   const [showUserLocation, setShowUserLocation] = useState(false);
   const [position, setPosition] = useState<{ lat: number; lng: number; accuracy: number } | null>(null);
@@ -51,9 +53,10 @@ const LmcMap = () => {
     <div className="relative h-full w-full">
       <MapComponent boundaryData={isLmc ? wardData : BirgunjData} coordinate={mapCenter}>
         {showUserLocation && position && <UserLocationMarker position={position}></UserLocationMarker>}
+        {showVotingCenter && isLmc && <MapDataDisplay />}
       </MapComponent>
 
-      <div className="absolute top-5 right-5 z-50">
+      <div className="absolute flex gap-4 top-5 right-5 z-50">
         <button
           onClick={handleShowMyLocation}
           disabled={isLocating}
@@ -63,6 +66,16 @@ const LmcMap = () => {
           <LocateFixed size={20} className="text-blue-600" />
           <span>{isLocating ? 'Getting location...' : 'Show My Location'}</span>
         </button>
+
+        {isLmc && (
+          <button
+            onClick={() => setShowVotingCenter((p) => !p)}
+            className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold text-black shadow-md transition-all hover:bg-gray-100 active:scale-95 disabled:bg-gray-300 disabled:cursor-not-allowed"
+            title="Show My Location"
+          >
+            <span>Voting center chettra 3</span>
+          </button>
+        )}
       </div>
 
       <div className="absolute right-5 bottom-20 md:bottom-5 z-50 flex flex-col gap-3">
