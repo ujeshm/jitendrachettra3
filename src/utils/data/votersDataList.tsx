@@ -57,7 +57,7 @@ export const VotingCenter = [
   {
     id: 6,
     ward_no: 5,
-    name: 'Mahalaxmisthan',
+    name: 'Mahalaxmisthan (Not Accurate)',
     lat: 27.6631472,
     lng: 85.3159457,
     description: 'Voter 6 description',
@@ -79,7 +79,7 @@ export const VotingCenter = [
   {
     id: 8,
     ward_no: 13,
-    name: 'Yatayat', // left not sure
+    name: 'Yatayat (Not Accurate)', // left not sure
     lat: 27.6652086,
     lng: 85.3082222,
     description: 'Voter 8 description',
@@ -294,9 +294,9 @@ export const VotingCenter = [
   {
     id: 27,
     ward_no: 28,
-    name: '28 Wardbuilding',
-    lat: 27.6375074,
-    lng: 85.3419878,
+    name: '२८ नं. वडा कार्यालय',
+    lat: 27.6377,
+    lng: 85.3421,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -304,9 +304,9 @@ export const VotingCenter = [
   {
     id: 28,
     ward_no: 28,
-    name: 'Harisidhi Mabi', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'हरिसिद्धी मा.बि (Not Accurate)', // not sure
+    lat: 27.6376,
+    lng: 85.3419,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -314,9 +314,9 @@ export const VotingCenter = [
   {
     id: 29,
     ward_no: 28,
-    name: 'Bhukampa Talim Hall', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'भुकम्प तालिम हल (Not Accurate)', // not sure
+    lat: 27.6376,
+    lng: 85.3435,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -325,9 +325,9 @@ export const VotingCenter = [
   {
     id: 30,
     ward_no: 29,
-    name: 'Lakhapukhu', //  not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'वडा कार्यालय अगाडीको सार्वजनिक स्थान (Not Accurate)', //  not sure
+    lat: 27.6352,
+    lng: 85.3412,
     description: 'Voter 10 description',
     address: 'Lalitpur',
     phone: 'Voter 10 phone',
@@ -336,9 +336,9 @@ export const VotingCenter = [
   {
     id: 31,
     ward_no: 12,
-    name: 'Godawari Koyalati Tole', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'कोयालाछी ब्रम्हाणी पाटी (Not Accurate)', // not sure
+    lat: 27.6175711,
+    lng: 85.3187914,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -346,9 +346,9 @@ export const VotingCenter = [
   {
     id: 32,
     ward_no: 12,
-    name: 'Godawari Saraswoti School',
-    lat: 27.6142661,
-    lng: 85.3222502,
+    name: 'सरस्वती मा.बि.',
+    lat: 27.6142665,
+    lng: 85.3224333,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -356,9 +356,9 @@ export const VotingCenter = [
   {
     id: 33,
     ward_no: 12,
-    name: 'Godawari Pamagal Hawai', // not sure
-    lat: 27.6588,
-    lng: 85.3247,
+    name: '१२ नं. वडा कार्यालय ठेचो',
+    lat: 27.615582,
+    lng: 85.3190157,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -366,9 +366,9 @@ export const VotingCenter = [
   {
     id: 34,
     ward_no: 12,
-    name: 'Godawari Ward Building',
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'पमागल हवाई टावर (Not Accurate)', // no sure
+    lat: 27.620634173401502,
+    lng: 85.35112005723182,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -376,9 +376,9 @@ export const VotingCenter = [
   {
     id: 35,
     ward_no: 12,
-    name: 'Godawari Bramayani School',
-    lat: 27.6105464,
-    lng: 85.3186777,
+    name: 'ब्रमायणी आ.बि.',
+    lat: 27.6105364,
+    lng: 85.3188527,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -387,9 +387,9 @@ export const VotingCenter = [
   {
     id: 36,
     ward_no: 14,
-    name: 'Godawari Buddha Mab',
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'प्राथमिक स्वास्थ्य केन्द्र बाडिगाउँ',
+    lat: 27.6175992,
+    lng: 85.3514749,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -397,9 +397,9 @@ export const VotingCenter = [
   {
     id: 37,
     ward_no: 14,
-    name: 'Godawari Prathamik Swastha',
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'बुद्ध मा.बि.',
+    lat: 27.5740904,
+    lng: 85.312548,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
@@ -407,9 +407,9 @@ export const VotingCenter = [
   {
     id: 38,
     ward_no: 14,
-    name: 'Godawari Fulchoki Mabi',
-    lat: 27.6588,
-    lng: 85.3247,
+    name: 'फुल्चोकी मा.बि.',
+    lat: 27.6244891,
+    lng: 85.3477806,
     description: 'Voter 10 description',
     address: 'Godawari',
     phone: 'Voter 10 phone',
